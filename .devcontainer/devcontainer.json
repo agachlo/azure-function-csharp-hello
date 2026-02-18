@@ -1,0 +1,23 @@
+{
+  "name": "Azure Functions .NET 8",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+
+  "postCreateCommand": "npm install -g azure-functions-core-tools@4 --unsafe-perm true",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azurefunctions",
+        "ms-dotnettools.csharp"
+      ]
+    }
+  },
+
+  "forwardPorts": [7071]
+}
